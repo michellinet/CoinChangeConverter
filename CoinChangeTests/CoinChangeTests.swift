@@ -36,29 +36,47 @@ class CoinChangeTests: XCTestCase {
     }
 
     func testOnePenny() {
-        let newValue = converter.convertToChange(value: 0.01)
+        let newValue = converter.convertToChange(value: 1)
         XCTAssertEqual(newValue, ChangeSet(quarters: 0, dimes: 0, nickels: 0, pennies: 1))
     }
 
     func testOneQuarter() {
-        let newValue = converter.convertToChange(value: 0.25)
+        let newValue = converter.convertToChange(value: 25)
         XCTAssertEqual(newValue, ChangeSet(quarters: 1, dimes: 0, nickels: 0, pennies: 0))
     }
 
     func testOneDime() {
-        let newValue = converter.convertToChange(value: 0.10)
+        let newValue = converter.convertToChange(value: 10)
         XCTAssertEqual(newValue, ChangeSet(quarters: 0, dimes: 1, nickels: 0, pennies: 0))
     }
 
     func testOneNickel() {
-        let newValue = converter.convertToChange(value: 0.05)
+        let newValue = converter.convertToChange(value: 05)
         XCTAssertEqual(newValue, ChangeSet(quarters: 0, dimes: 0, nickels: 1, pennies: 0))
     }
 
     func testTwoQuarter() {
-        let newValue = converter.convertToChange(value: 0.50)
+        let newValue = converter.convertToChange(value: 50)
         XCTAssertEqual(newValue, ChangeSet(quarters: 2, dimes: 0, nickels: 0, pennies: 0))
     }
 
+    func testTwoQuarterAndDime() {
+        let newValue = converter.convertToChange(value: 60)
+        XCTAssertEqual(newValue, ChangeSet(quarters: 2, dimes: 1, nickels: 0, pennies: 0))
+    }
 
+    func testTwoQuartersDimeAndNickel() {
+        let newValue = converter.convertToChange(value: 65)
+        XCTAssertEqual(newValue, ChangeSet(quarters: 2, dimes: 1, nickels: 1, pennies: 0))
+    }
+
+    func testTwoDimes() {
+        let newValue = converter.convertToChange(value: 20)
+        XCTAssertEqual(newValue, ChangeSet(quarters: 0, dimes: 2, nickels: 0, pennies: 0))
+    }
+
+    func testTwoQuatersDimeNickelAndPenny() {
+        let newValue = converter.convertToChange(value: 66)
+        XCTAssertEqual(newValue, ChangeSet(quarters: 2, dimes: 1, nickels: 1, pennies: 1))
+    }
 }

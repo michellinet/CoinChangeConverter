@@ -27,26 +27,18 @@ struct ChangeSet : Equatable {
 class CoinChangeConverter  {
 
     func convertToChange(value: UInt) -> ChangeSet {
-        switch value {
-        case 25 : return ChangeSet(quarters: 1, dimes: 0, nickels: 0, pennies: 0)
-        case 10 : return ChangeSet(quarters: 0, dimes: 1, nickels: 0, pennies: 0)
-        case 5 : return ChangeSet(quarters: 0, dimes: 0, nickels: 1, pennies: 0)
-        case 1 : return ChangeSet(quarters: 0, dimes: 0, nickels: 0, pennies: 1)
-        default :
-                let numberOfQuarters = value / 25
-                let remainderFromQuarters = value % 25
+        let numberOfQuarters = value / 25
+        let remainderFromQuarters = value % 25
 
-                let numberOfDimes = remainderFromQuarters / 10
-                let remainderFromDimes = remainderFromQuarters % 10
+        let numberOfDimes = remainderFromQuarters / 10
+        let remainderFromDimes = remainderFromQuarters % 10
 
-                let numberOfNickels = remainderFromDimes / 5
-                let remainderFromNickels = remainderFromDimes % 5
+        let numberOfNickels = remainderFromDimes / 5
+        let remainderFromNickels = remainderFromDimes % 5
 
-                let numberOfPennies = remainderFromNickels
+        let numberOfPennies = remainderFromNickels
 
-                return ChangeSet(quarters: numberOfQuarters, dimes: numberOfDimes, nickels: numberOfNickels, pennies: numberOfPennies)
-        }
-
+        return ChangeSet(quarters: numberOfQuarters, dimes: numberOfDimes, nickels: numberOfNickels, pennies: numberOfPennies)
     }
 
 }

@@ -14,6 +14,7 @@
 		01CF20221E9D5ABA000F3D32 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01CF20201E9D5ABA000F3D32 /* LaunchScreen.storyboard */; };
 		01CF202D1E9D5ABA000F3D32 /* CoinChangeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CF202C1E9D5ABA000F3D32 /* CoinChangeTests.swift */; };
 		01CF20381E9D5ABA000F3D32 /* CoinChangeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CF20371E9D5ABA000F3D32 /* CoinChangeUITests.swift */; };
+		01CF20461E9D5B4E000F3D32 /* CoinChangeConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CF20451E9D5B4E000F3D32 /* CoinChangeConverter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		01CF20331E9D5ABA000F3D32 /* CoinChangeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoinChangeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		01CF20371E9D5ABA000F3D32 /* CoinChangeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinChangeUITests.swift; sourceTree = "<group>"; };
 		01CF20391E9D5ABA000F3D32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01CF20451E9D5B4E000F3D32 /* CoinChangeConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoinChangeConverter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				01CF20171E9D5ABA000F3D32 /* AppDelegate.swift */,
 				01CF20191E9D5ABA000F3D32 /* ViewController.swift */,
+				01CF20451E9D5B4E000F3D32 /* CoinChangeConverter.swift */,
 				01CF201B1E9D5ABA000F3D32 /* Main.storyboard */,
 				01CF201E1E9D5ABA000F3D32 /* Assets.xcassets */,
 				01CF20201E9D5ABA000F3D32 /* LaunchScreen.storyboard */,
@@ -261,6 +264,7 @@
 			files = (
 				01CF201A1E9D5ABA000F3D32 /* ViewController.swift in Sources */,
 				01CF20181E9D5ABA000F3D32 /* AppDelegate.swift in Sources */,
+				01CF20461E9D5B4E000F3D32 /* CoinChangeConverter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

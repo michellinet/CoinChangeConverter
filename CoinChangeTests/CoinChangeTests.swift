@@ -10,6 +10,8 @@ import XCTest
 @testable import CoinChange
 
 class CoinChangeTests: XCTestCase {
+
+    let converter = CoinChangeConverter()
     
     override func setUp() {
         super.setUp()
@@ -32,5 +34,31 @@ class CoinChangeTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
-    
+
+    func testOnePenny() {
+        let newValue = converter.convertToChange(value: 0.01)
+        XCTAssertEqual(newValue, ChangeSet(quarters: 0, dimes: 0, nickels: 0, pennies: 1))
+    }
+
+    func testOneQuarter() {
+        let newValue = converter.convertToChange(value: 0.25)
+        XCTAssertEqual(newValue, ChangeSet(quarters: 1, dimes: 0, nickels: 0, pennies: 0))
+    }
+
+    func testOneDime() {
+        let newValue = converter.convertToChange(value: 0.10)
+        XCTAssertEqual(newValue, ChangeSet(quarters: 0, dimes: 1, nickels: 0, pennies: 0))
+    }
+
+    func testOneNickel() {
+        let newValue = converter.convertToChange(value: 0.05)
+        XCTAssertEqual(newValue, ChangeSet(quarters: 0, dimes: 0, nickels: 1, pennies: 0))
+    }
+
+    func testTwoQuarter() {
+        let newValue = converter.convertToChange(value: 0.50)
+        XCTAssertEqual(newValue, ChangeSet(quarters: 2, dimes: 0, nickels: 0, pennies: 0))
+    }
+
+
 }

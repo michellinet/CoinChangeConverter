@@ -511,6 +511,7 @@
 				01CF203E1E9D5ABA000F3D32 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		01CF203F1E9D5ABA000F3D32 /* Build configuration list for PBXNativeTarget "CoinChangeTests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +520,7 @@
 				01CF20411E9D5ABA000F3D32 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		01CF20421E9D5ABA000F3D32 /* Build configuration list for PBXNativeTarget "CoinChangeUITests" */ = {
 			isa = XCConfigurationList;
@@ -527,6 +529,7 @@
 				01CF20441E9D5ABA000F3D32 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

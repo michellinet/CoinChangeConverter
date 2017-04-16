@@ -9,7 +9,7 @@
 import UIKit
 
 
-class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UITextFieldDelegate {
 
     private let cellIdentifier = "COIN_CELL"
     
@@ -27,6 +27,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         coinCollectionView.dataSource = self
         coinCollectionView.delegate = self
+        
+        valueTextField.delegate = self
         
     }
     
@@ -81,19 +83,15 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         return cell
         
     }
-    
-    // MARK: UICollectionViewDelegate
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //no idea what to put here, le sad
-        
-        
-    }
-    
+
     // MARK: UICollectionViewLayout
     
+    @IBAction func convertButtonPressed(_ sender: UIButton) {
+        convert()
+    }
     
-    @IBAction func convert(_ sender: UIButton) {
+    
+    func convert() {
         guard let text = valueTextField.text else {
             return
         }
@@ -116,6 +114,14 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         coinCollectionView.reloadData()
         
+    }
+    
+    // MARK: UITextFieldDelegate
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        convert()
+        return true
     }
  
     

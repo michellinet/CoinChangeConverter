@@ -8,8 +8,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
 
+class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+
+    private let cellIdentifier = "COIN_CELL"
+    
     @IBOutlet weak var coinCollectionView: UICollectionView!
    
     
@@ -18,7 +21,90 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let nib = UINib(nibName: "CoinCollectionViewCell", bundle: nil)
+        
+        coinCollectionView.register(nib, forCellWithReuseIdentifier: cellIdentifier)
+        
+        coinCollectionView.dataSource = self
+        coinCollectionView.delegate = self
         
     }
     
+    var numberOfCoins: Int = 0
+    
+    
+    var currentChangeSet = ChangeSet(quarters: 0, dimes: 0, nickels: 0, pennies: 0)
+    
+  
+    // MARK: UICollectionViewDataSource
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 4
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if section == 0 {
+            return Int(currentChangeSet.quarters)
+        }
+        if section == 1 {
+            return Int(currentChangeSet.dimes)
+        }
+        if section == 2 {
+            return Int(currentChangeSet.nickels)
+        }
+        if section == 3 {
+            return Int(currentChangeSet.pennies)
+        }
+        
+        return 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath)
+        cell.backgroundColor = UIColor.red
+        return cell
+        
+    }
+    
+    // MARK: UICollectionViewDelegate
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        //no idea what to put here, le sad
+        
+        
+    }
+    
+    // MARK: UICollectionViewLayout
+    
+    
+    @IBAction func convert(_ sender: UIButton) {
+        guard let text = valueTextField.text else {
+            return
+        }
+        
+        guard let textToUInt = UInt(text) else {
+            
+            let alert = UIAlertController(title: "Gimme Coins!", message: "Please enter a valid number of coins to convert.", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Retry", style: UIAlertActionStyle.default, handler: nil))
+            
+            alert.view.tintColor = UIColor(colorLiteralRed: 118.0/255.0, green: 50.0/255.0, blue: 168.0/255.0, alpha: 1.0)
+            self.present(alert, animated: true, completion: nil)
+            
+            valueTextField.text = ""
+            
+            return
+        }
+        
+        let coinChangeConverter = CoinChangeConverter()
+        currentChangeSet = coinChangeConverter.convertToChange(value: textToUInt)
+        
+        coinCollectionView.reloadData()
+        
+    }
+ 
+    
+    
 }
+
+
+

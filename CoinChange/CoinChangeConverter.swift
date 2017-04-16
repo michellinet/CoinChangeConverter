@@ -21,6 +21,8 @@ struct ChangeSet : Equatable {
             lhs.nickels == rhs.nickels &&
             lhs.pennies == rhs.pennies
     }
+    
+    
 }
 
 
@@ -44,3 +46,4 @@ class CoinChangeConverter  {
 }
 
 //0.25x + 0.10y + 0.05z + 0.01a = value
+

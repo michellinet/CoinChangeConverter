@@ -15,6 +15,8 @@
 		01CF202D1E9D5ABA000F3D32 /* CoinChangeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CF202C1E9D5ABA000F3D32 /* CoinChangeTests.swift */; };
 		01CF20381E9D5ABA000F3D32 /* CoinChangeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CF20371E9D5ABA000F3D32 /* CoinChangeUITests.swift */; };
 		01CF20461E9D5B4E000F3D32 /* CoinChangeConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CF20451E9D5B4E000F3D32 /* CoinChangeConverter.swift */; };
+		DF0AF92D1EA068E700ECCA23 /* CoinCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF0AF92C1EA068E700ECCA23 /* CoinCollectionViewCell.xib */; };
+		DF0AF92F1EA0695B00ECCA23 /* CoinCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0AF92E1EA0695B00ECCA23 /* CoinCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		01CF20371E9D5ABA000F3D32 /* CoinChangeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinChangeUITests.swift; sourceTree = "<group>"; };
 		01CF20391E9D5ABA000F3D32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01CF20451E9D5B4E000F3D32 /* CoinChangeConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoinChangeConverter.swift; sourceTree = "<group>"; };
+		DF0AF92C1EA068E700ECCA23 /* CoinCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CoinCollectionViewCell.xib; sourceTree = "<group>"; };
+		DF0AF92E1EA0695B00ECCA23 /* CoinCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoinCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,10 +104,12 @@
 			isa = PBXGroup;
 			children = (
 				01CF20171E9D5ABA000F3D32 /* AppDelegate.swift */,
-				01CF20191E9D5ABA000F3D32 /* ViewController.swift */,
 				01CF20451E9D5B4E000F3D32 /* CoinChangeConverter.swift */,
+				01CF20191E9D5ABA000F3D32 /* ViewController.swift */,
 				01CF201B1E9D5ABA000F3D32 /* Main.storyboard */,
 				01CF201E1E9D5ABA000F3D32 /* Assets.xcassets */,
+				DF0AF92E1EA0695B00ECCA23 /* CoinCollectionViewCell.swift */,
+				DF0AF92C1EA068E700ECCA23 /* CoinCollectionViewCell.xib */,
 				01CF20201E9D5ABA000F3D32 /* LaunchScreen.storyboard */,
 				01CF20231E9D5ABA000F3D32 /* Info.plist */,
 			);
@@ -238,6 +244,7 @@
 				01CF20221E9D5ABA000F3D32 /* LaunchScreen.storyboard in Resources */,
 				01CF201F1E9D5ABA000F3D32 /* Assets.xcassets in Resources */,
 				01CF201D1E9D5ABA000F3D32 /* Main.storyboard in Resources */,
+				DF0AF92D1EA068E700ECCA23 /* CoinCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,6 +272,7 @@
 				01CF201A1E9D5ABA000F3D32 /* ViewController.swift in Sources */,
 				01CF20181E9D5ABA000F3D32 /* AppDelegate.swift in Sources */,
 				01CF20461E9D5B4E000F3D32 /* CoinChangeConverter.swift in Sources */,
+				DF0AF92F1EA0695B00ECCA23 /* CoinCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

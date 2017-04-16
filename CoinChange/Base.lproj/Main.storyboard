@@ -34,6 +34,9 @@
                                     <color key="titleColor" red="0.63927664974619292" green="0.11787756537515817" blue="0.088241105033168329" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" red="0.63927664974619292" green="0.11787756537515817" blue="0.088241105033168329" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="convert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WwO-i6-2EJ"/>
+                                </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="OrC-A4-BpJ" userLabel="Coin Collection View">
                                 <rect key="frame" x="16" y="65" width="343" height="333"/>
@@ -70,9 +73,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="coinChangeView" destination="OrC-A4-BpJ" id="48b-Fk-h27"/>
-                        <outlet property="coinCollectionView" destination="OrC-A4-BpJ" id="lKc-Mc-i4S"/>
-                        <outlet property="valueTextField" destination="Dp2-aC-wmM" id="HLL-hy-SQ0"/>
+                        <outlet property="coinCollectionView" destination="OrC-A4-BpJ" id="EUD-cT-OSk"/>
+                        <outlet property="valueTextField" destination="Dp2-aC-wmM" id="ow3-Ti-WMP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

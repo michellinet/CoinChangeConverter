@@ -60,8 +60,24 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath)
-        cell.backgroundColor = UIColor.red
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as! CoinCollectionViewCell
+        
+        if indexPath.section == 0 {
+            cell.coinImageView.image = #imageLiteral(resourceName: "Quarter")
+        }
+        
+        if indexPath.section == 1 {
+            cell.coinImageView.image = #imageLiteral(resourceName: "Dime")
+        }
+        
+        if indexPath.section == 2 {
+            cell.coinImageView.image = #imageLiteral(resourceName: "Nickel")
+        }
+        
+        if indexPath.section == 3 {
+            cell.coinImageView.image = #imageLiteral(resourceName: "Penny")
+        }
+        
         return cell
         
     }

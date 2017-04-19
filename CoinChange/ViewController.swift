@@ -101,7 +101,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             let alert = UIAlertController(title: "Gimme Coins!", message: "Please enter a valid number of coins to convert.", preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "Retry", style: UIAlertActionStyle.default, handler: nil))
             
-            alert.view.tintColor = UIColor(colorLiteralRed: 118.0/255.0, green: 50.0/255.0, blue: 168.0/255.0, alpha: 1.0)
+            alert.view.tintColor = UIColor(colorLiteralRed: 163.0/255.0, green: 30.0/255.0, blue: 23.0/255.0, alpha: 1.0)
             self.present(alert, animated: true, completion: nil)
             
             valueTextField.text = ""
